@@ -1,0 +1,340 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+
+<div class="block">
+    <div style="font-weight: bold; font-size: 30px; text-align: center;">
+        伺服器模組介紹
+    </div>
+    <div>
+        &nbsp;
+    </div>
+
+    <div style="font-weight: bold; font-size: 25px; ">
+        <p><strong>&nbsp;&nbsp;伺服器插件類(plugin)</strong></p>
+
+    </div>
+
+    <div class="accordion" id="accordionExample">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+            SkinsRestorer(服裝顯示)
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            這個插件允許離線玩家能夠顯示正版玩家的皮膚，也可以透過指令等方式在伺服器中使用自己的皮膚(他人可見)
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            PortableBlocks(便利工作台)
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            這個插件允許玩家透過 蹲下+攻擊(建議對著地板) 來使用 合成台 與 終界盒
+          </div>
+        </div>
+      </div>
+
+
+      <!-- AuthMe -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAuthMe" aria-expanded="false" aria-controls="collapseAuthMe">
+          AuthMe（登入系統）
+        </button>
+      </h2>
+      <div id="collapseAuthMe" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          用來管理離線伺服器登入，提供 /register /login 等帳號系統，防止冒名登入，保護玩家帳號安全，包括離線帳戶。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/register &lt;設定密碼&gt; &lt;密碼確認&gt;  初次進入伺服器，該指令會讓玩家為當前帳號設定一組密碼  ex:/register 123 123<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/login &lt;密碼&gt;  設定密碼後，玩家進入伺服器後須輸入密碼才能開始遊玩  ex:/login 123
+        </div>
+      </div>
+    </div>
+
+
+    <!-- InventoryRollbackPlus -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseInventoryRollback" aria-expanded="false" aria-controls="collapseInventoryRollback">
+          InventoryRollbackPlus（物品欄回溯）
+        </button>
+      </h2>
+      <div id="collapseInventoryRollback" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          在玩家死亡、斷線、進出世界時保存背包，<br>
+            若玩家因意外事件導致物品欄產生無法復原的丟失，可以向管理員申請復原
+        </div>
+      </div>
+    </div>
+
+    <!-- LuckPerms -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseLuckPerms" aria-expanded="false" aria-controls="collapseLuckPerms">
+          LuckPerms（權限系統）
+        </button>
+      </h2>
+      <div id="collapseLuckPerms" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          權限插件，用於管控玩家可以使用的指令範圍
+        </div>
+      </div>
+    </div>
+
+    <!-- EssentialsX 系列 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEssentials" aria-expanded="false" aria-controls="collapseEssentials">
+          EssentialsX（基本功能）
+        </button>
+      </h2>
+      <div id="collapseEssentials" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          提供 /spawn、/home、/tpa、經濟系統、聊天格式、訊息公告等常用功能，附加模組有 Discord 聊天串接、聊天過濾。<br>
+            本伺服器中主要用於執行/back /warp指令，<br>
+            /back 使玩家回到上次傳送的位置 <br>
+            /warp 前往一個公共設施
+        </div>
+      </div>
+    </div>
+
+    <!-- 其他插件 (簡略介紹) -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOthers" aria-expanded="false" aria-controls="collapseOthers">
+          Aevytpa(玩家傳送)
+        </button>
+      </h2>
+      <div id="collapseOthers" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            該插件允許玩家透過 /tpa &lt;玩家名稱&gt 向該玩家發送傳送請求<br>
+            玩家收到傳送請求後，可以透過按下聊天欄中的確認按鈕允許傳送
+        </div>
+      </div>
+    </div>
+
+    <div style="font-weight: bold; font-size: 25px; ">
+        <p><strong>&nbsp;&nbsp;伺服器模組類(mods)</strong></p>
+
+    </div>
+
+
+
+      <!-- Iron的法术与魔法书 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#ironsSpellbooks" aria-expanded="false" aria-controls="ironsSpellbooks">
+            Irons的法术与魔法书
+          </button>
+        </h2>
+        <div id="ironsSpellbooks" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            添加各種魔法書、法術與魔杖，讓玩家體驗類似 RPG 的魔法戰鬥系統。結合法術施放、技能升級與元素屬性。
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- 暮色森林 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#twilightforest" aria-expanded="false" aria-controls="twilightforest">
+            暮色森林（twilightforest）
+          </button>
+        </h2>
+        <div id="twilightforest" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            經典冒險維度模組，添加一個奇幻世界：暮色森林，玩家可在其中探索迷宮、挑戰 Boss 並獲得特殊戰利品。
+          </div>
+        </div>
+      </div>
+
+      <!-- 天堂模組 Aether -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#aether" aria-expanded="false" aria-controls="aether">
+            天堂模組（Aether）
+          </button>
+        </h2>
+        <div id="aether" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            添加一個與地獄相對的天空維度：天堂，擁有全新方塊、怪物與冒險內容，適合探險與收集。
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Player Animation Library -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#playerAnim" aria-expanded="false" aria-controls="playerAnim">
+            Player Animation Library(Iron的法术与魔法书依賴)
+          </button>
+        </h2>
+        <div id="playerAnim" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            提供支援玩家動畫的函式庫模組，讓其他模組可以添加流暢的角色動作（如揮手、走路動畫等）。
+          </div>
+        </div>
+      </div>
+
+      <!-- GeckoLib -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#geckolib" aria-expanded="false" aria-controls="geckolib">
+            GeckoLib(Iron的法术与魔法书依賴)
+          </button>
+        </h2>
+        <div id="geckolib" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            一個動畫模組框架，允許模組開發者加入 3D 實時動畫，用於怪物、武器等動態效果。
+          </div>
+        </div>
+      </div>
+
+      <!-- Curios (各版本) -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#curios" aria-expanded="false" aria-controls="curios">
+            Curios API(Iron的法术与魔法书依賴)
+          </button>
+        </h2>
+        <div id="curios" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            提供額外的裝備欄位支援，例如戒指、項鍊等，供其他模組（如魔法模組）使用。
+          </div>
+        </div>
+      </div>
+
+      <!-- Caelus -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#caelus" aria-expanded="false" aria-controls="caelus">
+            Caelus API(Iron的法术与魔法书依賴)
+          </button>
+        </h2>
+        <div id="caelus" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            一個輕量級 API，主要提供飛行能力支援，常與 Elytra 強化類模組搭配使用。
+          </div>
+        </div>
+      </div>
+
+      <!-- WorldEdit -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#worldedit" aria-expanded="false" aria-controls="worldedit">
+            WorldEdit
+          </button>
+        </h2>
+        <div id="worldedit" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            強大的地圖建造工具，允許快速選取、複製、填充與編輯方塊，建築師的好幫手。
+          </div>
+        </div>
+      </div>
+
+      <!-- SkinRestorer -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#skinrestorer" aria-expanded="false" aria-controls="skinrestorer">
+            SkinRestorer
+          </button>
+        </h2>
+        <div id="skinrestorer" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            用來還原離線模式玩家的皮膚，搭配伺服器登入系統使用。
+          </div>
+        </div>
+      </div>
+
+      <!-- owo-lib -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#owolib" aria-expanded="false" aria-controls="owolib">
+            owo-lib(天堂模組依賴)
+          </button>
+        </h2>
+        <div id="owolib" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            為 Fabric 或 NeoForge 提供 UI 設計與事件處理功能的支援庫，供其他模組依賴。
+          </div>
+        </div>
+      </div>
+
+      <!-- Forgified Fabric API -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#ffapi" aria-expanded="false" aria-controls="ffapi">
+            Forgified Fabric API(天堂模組依賴)
+          </button>
+        </h2>
+        <div id="ffapi" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            讓 Fabric 模組能夠在 NeoForge/FML 環境中運作的轉接模組，相容性橋接。
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Xaero's 小地圖 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#xaerosmap" aria-expanded="false" aria-controls="xaerosmap">
+            Xaero's 小地圖
+          </button>
+        </h2>
+        <div id="xaerosmap" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            顯示在畫面右上角的小地圖模組，支援標記地點、顯示怪物與自訂地圖樣式。
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+</div>
+
+</Layout>
+
+<style>
+    .accordion-item {
+        background-color: transparent !important;
+    }
+    .accordion-button.collapsed {
+        background-color: transparent !important;
+    }
+</style>

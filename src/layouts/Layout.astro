@@ -15,7 +15,8 @@ import 'bootstrap/dist/css/bootstrap.css'
     <meta name="generator" content={Astro.generator} />
     <script type="module" src="/src/scripts/bootstrap.js"></script>
     <title>幽影櫻的MC伺服器</title>
-    <style>
+
+    <style is:global>
         .block {
             margin: auto; /*置中*/
             /* opacity: 0.6;  刪掉這行 */
@@ -27,21 +28,11 @@ import 'bootstrap/dist/css/bootstrap.css'
             border-radius: 20px;  /*圓滑*/
         }
 
-    </style>
-
-    <style>
-        .album.bg-body-tertiary {
-            background-color: transparent !important;
-        }
-
-    </style>
-
-    <style>
         body {
           position: relative;
           margin: 0;
           padding: 0;
-          background-image: url('462566447_1268581647755628_3097208111781003104_n.jpg');
+          background-image: url('/462566447_1268581647755628_3097208111781003104_n.jpg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -72,6 +63,7 @@ import 'bootstrap/dist/css/bootstrap.css'
         </div>
     </div>
 
+    <!-- 主要內容區 -->
     <slot />
 
     <Footer />

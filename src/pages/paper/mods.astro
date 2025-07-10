@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+
+<div class="block">
+    <div style="font-weight: bold; font-size: 30px; text-align: center;">
+        伺服器模組介紹
+    </div>
+    <div>
+        &nbsp;
+    </div>
+
+    <div class="accordion" id="accordionExample">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+            SkinsRestorer(服裝顯示)
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            這個插件允許離線玩家能夠顯示正版玩家的皮膚，也可以透過指令等方式在伺服器中使用自己的皮膚(他人可見)
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            PortableBlocks(便利工作台)
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            這個插件允許玩家透過 蹲下+攻擊(建議對著地板) 來使用 合成台 與 終界盒
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            PerWorldHomes(home)
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            這個插件允許玩家使用指令設定家的位置，並透過指令快速回到家中<br>
+            指令列表:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/sethome &lt;家的名稱&gt;  該指令會在玩家所處的位置建立一個家  ex:/sethome home<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/home &lt;家的名稱&gt;  該指令會讓玩家傳送回家  ex:/home home
+          </div>
+        </div>
+      </div>
+
+      <!-- AuthMe -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAuthMe" aria-expanded="false" aria-controls="collapseAuthMe">
+          AuthMe（登入系統）
+        </button>
+      </h2>
+      <div id="collapseAuthMe" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          用來管理離線伺服器登入，提供 /register /login 等帳號系統，防止冒名登入，保護玩家帳號安全，包括離線帳戶。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/register &lt;設定密碼&gt; &lt;密碼確認&gt;  初次進入伺服器，該指令會讓玩家為當前帳號設定一組密碼  ex:/register 123 123<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/login &lt;密碼&gt;  設定密碼後，玩家進入伺服器後須輸入密碼才能開始遊玩  ex:/login 123
+        </div>
+      </div>
+    </div>
+
+    <!-- WorldEdit -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseWorldEdit" aria-expanded="false" aria-controls="collapseWorldEdit">
+          WorldEdit（世界編輯）
+        </button>
+      </h2>
+      <div id="collapseWorldEdit" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          一個建築插件，允許管理員使用選區與指令快速複製、貼上、填充、清除區域。<br>
+            如需移動大型建築物，可以向管理員申請。
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- InventoryRollbackPlus -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseInventoryRollback" aria-expanded="false" aria-controls="collapseInventoryRollback">
+          InventoryRollbackPlus（物品欄回溯）
+        </button>
+      </h2>
+      <div id="collapseInventoryRollback" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          在玩家死亡、斷線、進出世界時保存背包，<br>
+            若玩家因意外事件導致物品欄產生無法復原的丟失，可以向管理員申請復原
+        </div>
+      </div>
+    </div>
+
+    <!-- Multiverse 系列 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseMultiverse" aria-expanded="false" aria-controls="collapseMultiverse">
+          Multiverse 系列（多世界支援）
+        </button>
+      </h2>
+      <div id="collapseMultiverse" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          該系列包含 multiverse-core、portals、netherportals、inventories，允許伺服器建立多個世界、傳送門、分開背包、管理地獄/終界。<br>
+            是本伺服器可以有複數世界的重要依賴
+        </div>
+      </div>
+    </div>
+
+    <!-- LuckPerms -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseLuckPerms" aria-expanded="false" aria-controls="collapseLuckPerms">
+          LuckPerms（權限系統）
+        </button>
+      </h2>
+      <div id="collapseLuckPerms" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          權限插件，用於管控玩家可以使用的指令範圍
+        </div>
+      </div>
+    </div>
+
+    <!-- EssentialsX 系列 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEssentials" aria-expanded="false" aria-controls="collapseEssentials">
+          EssentialsX（基本功能）
+        </button>
+      </h2>
+      <div id="collapseEssentials" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          提供 /spawn、/home、/tpa、經濟系統、聊天格式、訊息公告等常用功能，附加模組有 Discord 聊天串接、聊天過濾。<br>
+            本伺服器中主要用於執行/back /warp指令，<br>
+            /back 使玩家回到上次傳送的位置 <br>
+            /warp 前往一個公共設施
+        </div>
+      </div>
+    </div>
+
+    <!-- CoreProtect -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseCoreProtect" aria-expanded="false" aria-controls="collapseCoreProtect">
+          CoreProtect（紀錄/回溯系統）
+        </button>
+      </h2>
+      <div id="collapseCoreProtect" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          能夠記錄誰挖了什麼方塊、打開了什麼箱子，並還原被破壞的地圖。<br>
+            如果建築物因意外事件造成難以復原的破壞，可以向管理員申請修復
+        </div>
+      </div>
+    </div>
+
+    <!-- 其他插件 (簡略介紹) -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOthers" aria-expanded="false" aria-controls="collapseOthers">
+          Aevytpa(玩家傳送)
+        </button>
+      </h2>
+      <div id="collapseOthers" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            該插件允許玩家透過 /tpa &lt;玩家名稱&gt; 向該玩家發送傳送請求<br>
+            玩家收到傳送請求後，可以透過按下聊天欄中的確認按鈕允許傳送
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+
+</div>
+
+</Layout>
+
+<style>
+    .accordion-item {
+        background-color: transparent !important;
+    }
+    .accordion-button.collapsed {
+        background-color: transparent !important;
+    }
+</style>

@@ -1,29 +1,27 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+
 <main style="
-    background-image: url('Minecraft Screenshot 2025.06.26 - 01.23.07.95.png');
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-">
+        background-image: url('Minecraft Screenshot 2025.06.26 - 01.23.07.95.png');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    ">
     <!-- 標題文字 -->
     <div style="font-weight: bold; font-size: 50px;">
         歡迎來到
     </div>
     <div style="font-weight: bold; font-size: 50px;">
-        幽影櫻的MC伺服器[paper]
+        幽影櫻的MC伺服器[youer]
     </div>
 </main>
 
@@ -42,7 +40,7 @@ import Layout from '../../layouts/Layout.astro';
         <div style="background-color: #1e1e1e; color: #ffffff; padding: 15px 20px; border-radius: 8px; font-family: monospace; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; ">
 
             <!-- 顯示伺服器地址 -->
-            <div id="server-address" style="user-select: text;">mcserver.barian.ayn.moe</div>
+            <div id="server-address" style="user-select: text;">mcserver.barian.ayn.moe:24565</div>
 
             <!-- 複製按鈕 -->
             <button onclick="copyAddress()"
@@ -76,8 +74,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
 
     <div style="text-align: center; font-size: 20px;">
-        本伺服器由幽影櫻創立，目前為止共四個世界，各自擁有獨立的主世界/地獄/終界<br>
-        詳細內容請參閱後續介紹
+        本伺服器由幽影櫻創立，以paper伺服器中的第三世界(ncworld)為基礎創建，<br>新增了neoforge模組增加遊戲玩法，需使用nneoforger1.21.1登入
     </div>
 </div>
 
@@ -95,62 +92,7 @@ import Layout from '../../layouts/Layout.astro';
                         <img src="Minecraft Screenshot 2025.06.26 - 13.50.00.51.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
                               role="img" width="100%">
                         <div class="card-body">
-                            <strong>主世界(第一世界)</strong>
-                        </div>
-
-                        <div class="card-body">
-                            <p class="card-text">
-                                出生點位於一座小島上<br>
-                                誕生於伺服器創立前<br>
-                                幽影櫻所遊玩的基岩版本地世界<br>
-                                先後轉移至基岩版伺服器接續遊玩<br>
-                                加入java版後轉換為java版世界繼續作為主世界使用
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">ID:newworld</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">物品群組:default</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="Minecraft Screenshot 2025.06.26 - 14.04.41.80.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
-                              role="img" width="100%">
-                        <div class="card-body">
-                            <strong>分支世界(第二世界)</strong>
-                        </div>
-
-                        <div class="card-body">
-                            <p class="card-text">
-                                使用Multiverse-Core建立的新世界<br>
-                                世界類型為大型生態域<br>
-                                同時也是本伺服器唯一的大型生態域世界<br>
-                                提供新玩家蒐集物資，發展使用<br>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">ID:test</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">物品群組:default</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
-                              role="img" width="100%">
-                        <div class="card-body">
-                            <strong>櫻花盆地(第三世界)</strong>
+                            <strong>主世界</strong>
                         </div>
 
                         <div class="card-body">
@@ -162,10 +104,56 @@ import Layout from '../../layouts/Layout.astro';
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">ID:ncworld</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">物品群組:ncworld</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:困難</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="Base Profile Screenshot 2025.07.08 - 04.02.48.66.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
+                              role="img" width="100%">
+                        <div class="card-body">
+                            <strong>天堂aether(模組維度)</strong>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                眾所周知的老牌模組aether[天境]<br>
+                                使用螢石搭建傳送門框架(與地獄門雷同)<br>
+                                使用水桶右鍵框架啟動傳送門<br>
+                                <i>"來自地獄的螢石 怎麼可能點亮通往天堂的大門..."</i><br>
+                            </p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="Base Profile Screenshot 2025.07.08 - 04.04.28.28.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
+                              role="img" width="100%">
+                        <div class="card-body">
+                            <strong>暮色森林(模組維度)</strong>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                一個被永恆之夜壟罩的森林世界<br>
+                                有許多新的內容可以探索<br>
+                                做一個2x2的小水池，水池邊方滿植物<br>
+                                為投入一顆鑽石，只見一到閃電劈過<br>通往暮色森林的傳送門就會打開
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
                                 </div>
                             </div>
                         </div>
@@ -176,10 +164,6 @@ import Layout from '../../layouts/Layout.astro';
         </div>
     </div>
 
-</div>
-
-<div class="block"><!-- 主要內容2 -->
-    test
 </div>
 
 </Layout>
