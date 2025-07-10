@@ -1,7 +1,10 @@
 ---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ToTop from '../components/ToTop.astro';
+
 // Import all of Bootstrap’s CSS
 import 'bootstrap/dist/css/bootstrap.css'
-
 // Import all of Bootstrap’s JS
 import * as bootstrap from 'bootstrap'
 ---
@@ -57,251 +60,21 @@ import * as bootstrap from 'bootstrap'
 
 </head>
 <body>
-<header data-bs-theme="dark">   <!-- 至頂項目欄 -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="#">幽影櫻的MC伺服器[paper]</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="modpage.html">模組列表</a> </li>
-                </ul>
-            </div>
+    <Navbar />
 
-                    <!-- 右側下拉選單 -->
-        <ul class="navbar-nav mb-2 mb-md-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-bold bg-warning text-dark rounded px-3 py-2 fs-5" href="#" id="dropdownMenuLink"
-               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               伺服器列表
-            </a>
+    <div>   <!-- 佔位空白符號 -->
 
-
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="index.html">paper伺服器</a></li>
-              <li><a class="dropdown-item" href="index-youer.html">youer伺服器</a></li>
-            </ul>
-          </li>
-        </ul>
-
+        <div>
+            &nbsp;
         </div>
-    </nav>
-</header>
-
-<div>   <!-- 佔位空白符號 -->
-
-    <div>
-        &nbsp;
-    </div>
-    <div>
-        &nbsp;
-    </div>
-</div>
-
-<main style="
-        background-image: url('Minecraft Screenshot 2025.06.26 - 01.23.07.95.png');
-        background-size: cover;
-        background-position: center;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    ">
-    <!-- 標題文字 -->
-    <div style="font-weight: bold; font-size: 50px;">
-        歡迎來到
-    </div>
-    <div style="font-weight: bold; font-size: 50px;">
-        幽影櫻的MC伺服器[paper]
-    </div>
-</main>
-
-<div>
-    &nbsp;
-</div>
-
-<div class="block">
-        <!-- 伺服器位置 -->
-
-    <div style="font-weight: bold; font-size: 30px; text-align: center;">
-        伺服器地址:
-    </div>
-
-    <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <div style="background-color: #1e1e1e; color: #ffffff; padding: 15px 20px; border-radius: 8px; font-family: monospace; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; ">
-
-            <!-- 顯示伺服器地址 -->
-            <div id="server-address" style="user-select: text;">mcserver.barian.ayn.moe</div>
-
-            <!-- 複製按鈕 -->
-            <button onclick="copyAddress()"
-                    style="background-color: #333; color: white; border: none; padding: 5px 12px; font-size: 14px; border-radius: 4px; cursor: pointer; width:4em ">
-                複製
-            </button>
-
-
+        <div>
+            &nbsp;
         </div>
     </div>
 
-    <script>
-        function copyAddress() {
-            const text = document.getElementById("server-address").innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("已複製伺服器地址！");
-            });
-        }
-    </script>
-</div>
+    <slot />
 
-<div class="block"><!-- 主要內容 -->
-    <!-- 原本的內容貼在這裡 -->
-
-
-
-
-
-    <div style="font-weight: bold; font-size: 30px; text-align: center;">
-        伺服器介紹
-    </div>
-
-    <div style="text-align: center; font-size: 20px;">
-        本伺服器由幽影櫻創立，目前為止共四個世界，各自擁有獨立的主世界/地獄/終界<br>
-        詳細內容請參閱後續介紹
-    </div>
-</div>
-
-<div class="block"><!-- 主要內容 -->
-    <div style="font-weight: bold; font-size: 30px; text-align: center;">
-        世界介紹
-    </div>
-
-    <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="Minecraft Screenshot 2025.06.26 - 13.50.00.51.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
-                              role="img" width="100%">
-                        <div class="card-body">
-                            <strong>主世界(第一世界)</strong>
-                        </div>
-
-                        <div class="card-body">
-                            <p class="card-text">
-                                出生點位於一座小島上<br>
-                                誕生於伺服器創立前<br>
-                                幽影櫻所遊玩的基岩版本地世界<br>
-                                先後轉移至基岩版伺服器接續遊玩<br>
-                                加入java版後轉換為java版世界繼續作為主世界使用
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">ID:newworld</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">物品群組:default</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="Minecraft Screenshot 2025.06.26 - 14.04.41.80.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
-                              role="img" width="100%">
-                        <div class="card-body">
-                            <strong>分支世界(第二世界)</strong>
-                        </div>
-
-                        <div class="card-body">
-                            <p class="card-text">
-                                使用Multiverse-Core建立的新世界<br>
-                                世界類型為大型生態域<br>
-                                同時也是本伺服器唯一的大型生態域世界<br>
-                                提供新玩家蒐集物資，發展使用<br>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">ID:test</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">物品群組:default</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:普通</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="Minecraft%20Screenshot%202025.06.26%20-%2001.23.07.95.png" aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225"
-                              role="img" width="100%">
-                        <div class="card-body">
-                            <strong>櫻花盆地(第三世界)</strong>
-                        </div>
-
-                        <div class="card-body">
-                            <p class="card-text">
-                                出生點位於一個盆地旁<br>
-                                四周由長滿櫻花的山巒環繞<br>
-                                為新開設的養老世界<br>
-                                為服主目前主要活動的世界
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">ID:ncworld</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">死亡不掉落</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">物品群組:ncworld</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">難度:困難</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div class="block"><!-- 主要內容2 -->
-    test
-</div>
-
-<div class="container-fluid text-center bg-dark text-white py-3">
-    <p class="mb-1">本網站由幽影櫻製作</p>
-    <p class="mb-0">聯絡信箱: barianjapan@gmail.com</p>
-</div>
-
-
-
-
-<button type="button" class="btn btn-primary shadow"
-        onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
-        style="width: 60px; height: 60px; border-radius: 50%;
-               position: fixed; bottom: 20px; right: 20px; z-index: 999;
-               font-size: 24px; display: flex; align-items: center; justify-content: center;">
-  <i class="bi bi-arrow-up-short"></i>
-</button>
-
-
-
-
-
-
-
-
-
-
+    <Footer />
+    <ToTop />
 </body>
-
-
 </html>
