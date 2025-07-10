@@ -1,3 +1,10 @@
+Minecraft伺服器
+===
+
+以下是依據原repo https://github.com/Barian0517/mcserverweb 重構的新專案
+將以Astro來建置
+
+
 # Astro Starter Kit: Basics
 
 ```sh
