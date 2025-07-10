@@ -6,7 +6,6 @@ import ToTop from '../components/ToTop.astro';
 // Import all of Bootstrap’s CSS
 import 'bootstrap/dist/css/bootstrap.css'
 // Import all of Bootstrap’s JS
-import * as bootstrap from 'bootstrap'
 ---
 <!doctype html>
 <html lang="zh-tw">
@@ -14,6 +13,7 @@ import * as bootstrap from 'bootstrap'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content={Astro.generator} />
+    <script type="module" src="/src/scripts/bootstrap.js"></script>
     <title>幽影櫻的MC伺服器[paper]</title>
     <style>
         .block {
@@ -76,5 +76,8 @@ import * as bootstrap from 'bootstrap'
 
     <Footer />
     <ToTop />
+    <script>
+        import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+    </script>
 </body>
 </html>
