@@ -8,5 +8,8 @@ const base = isProd ? '/mcserver-web-v2/' : '/';
 export default defineConfig({
   output: 'static',
   base,
-  trailingSlash: "never"
+  trailingSlash: "never",
+  redirects: {
+    '/': '/youer',
+  }
 });
