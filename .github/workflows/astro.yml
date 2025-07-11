@@ -26,6 +26,7 @@ concurrency:
 
 env:
   BUILD_PATH: "." # default value when not using subfolders
+  NODE_ENV: production
   # BUILD_PATH: subfolder
 
 jobs:
