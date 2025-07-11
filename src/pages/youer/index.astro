@@ -52,7 +52,7 @@ import Layout from '../../layouts/Layout.astro';
         </div>
     </div>
 
-    <script>
+    <script is:script>
         function copyAddress() {
             const text = document.getElementById("server-address").innerText;
             navigator.clipboard.writeText(text).then(() => {
