@@ -1,4 +1,7 @@
 ---
+const { navTitle } = Astro.props;
+
+
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ToTop from '../components/ToTop.astro';
@@ -51,7 +54,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 </head>
 <body>
-    <Navbar />
+    <Navbar title={navTitle} />
 
     <div>   <!-- 佔位空白符號 -->
 
