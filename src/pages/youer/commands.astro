@@ -1,0 +1,96 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout>
+
+<div class="block"><!-- 主要內容2 -->
+
+    <div style="text-align: center; font-weight: bold; font-size: 25px;">
+      <p><strong>常用指令</strong></p>
+    </div>
+
+
+    <div style=" font-weight: bold; font-size: 25px;">
+      <p><strong>登入與註冊</strong></p>
+    </div>
+
+    <div>
+        <p>第一次進入需註冊:&nbsp;/register <設定密碼> <密碼確認></p>
+        <p>登入:&nbsp;/login <密碼></p>
+    </div>
+
+    <div style=" font-weight: bold; font-size: 25px;">
+      <p><strong>家園</strong></p>
+    </div>
+
+    <div>
+        <p>設定家園:&nbsp;/sethome <家園名稱></p>
+        <p>傳送到家園:&nbsp;/home <家園名稱></p>
+    </div>
+
+    <div style=" font-weight: bold; font-size: 25px;">
+      <p><strong>設施</strong></p>
+    </div>
+
+    <div>
+        <p>前往設施:&nbsp;/warp <設施名稱></p>
+    </div>
+
+
+    <div style=" font-weight: bold; font-size: 25px;">
+      <p><strong>返回</strong></p>
+    </div>
+
+    <div>
+        <p>所有傳送指令都可以使用back返回傳送前的位置</p>
+        <p>使用需輸入:&nbsp;/back</p>
+    </div>
+
+    <div style=" font-weight: bold; font-size: 25px;">
+      <p><strong>TPA</strong></p>
+    </div>
+
+    <div>
+        <p>想傳送到某個玩家的位置請使用TPA</p>
+        <p>使用需輸入:&nbsp;/tpa <玩家名稱></p>
+        <p>被傳送玩家打開聊天欄點擊[確認]按鈕即可</p>
+    </div>
+
+    <div style=" font-weight: bold; font-size: 25px;">
+      <p><strong>設定皮膚</strong></p>
+    </div>
+
+<div style="position: relative;">
+  <!-- 被遮蓋的原本內容 -->
+  <div style="opacity: 0.7;">
+    <p>正版玩家使用官方方式設定皮膚即可</p>
+    <p>盜版玩家將皮膚上傳至 <a href="https://mineskin.org/">https://mineskin.org/</a> 複製 Direct link</p>
+    <p>進入遊戲使用 /skin set web &lt;格式&gt; &lt;複製的連結&gt;</p>
+    <p>關於 &lt;格式&gt; 參數：支援經典（classic）和纖薄（slim）皮膚模型，如果不確定可以都試試看</p>
+  </div>
+
+  <!-- 蓋在上方的提醒 -->
+<div style="
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  color: red;
+  font-size: 64px;
+  font-weight: bold;
+  z-index: 10;
+  text-decoration: line-through;
+">
+  這功能壞了，別管他
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</Layout>
