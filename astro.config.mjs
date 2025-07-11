@@ -5,6 +5,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'static',
   redirects: {
-    '/': '/youer',
+    '/': '/mcserver-web-v2/youer',
   },
 });
