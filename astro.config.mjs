@@ -12,7 +12,7 @@ export default defineConfig({
   }
 =======
   redirects: {
-    '/': '/mcserver-web-v2/youer',
+    '/': '/youer',
   },
 >>>>>>> parent of e2396f1... 修正base
 });
