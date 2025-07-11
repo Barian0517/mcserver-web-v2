@@ -1,17 +1,13 @@
----
-const { title="幽影櫻的MC伺服器" } = Astro.props;
----
-
 <header data-bs-theme="dark">   <!-- 至頂項目欄 -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="#">{title}</a>
+        <div class="container-fluid"><a class="navbar-brand" href="#">幽影櫻的MC伺服器[paper]</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="mods">模組列表</a> </li>
+                    <li class="nav-item"><a class="nav-link active" href={`${import.meta.env.BASE_URL}paper/`}>Home</a></li>
+                    <li class="nav-item"> <a class="nav-link" href={`${import.meta.env.BASE_URL}paper/mods/`}>模組列表</a> </li>
                 </ul>
             </div>
 
