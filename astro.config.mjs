@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  base: 'mcserver-web-v2',
+  site: 'https://barian0517.github.io/mcserver-web-v2/',
   output: 'static',
   redirects: {
     '/': '/youer',
