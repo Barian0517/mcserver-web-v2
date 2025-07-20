@@ -1,3 +1,6 @@
+---
+const { pathname } = Astro.url;
+---
 <header data-bs-theme="dark">   <!-- 至頂項目欄 -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -10,10 +13,10 @@
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item"><a class="nav-link active" href={`/youer/`}>Home</a></li>
-          <li class="nav-item"><a class="nav-link" href={`/youer/mods/`}>模組列表</a></li>
-            <li class="nav-item"><a class="nav-link" href={`/youer/commands/`}>常用指令</a></li>
-            <li class="nav-item"><a class="nav-link" href={`/youer/joinserver/`}>如何進入</a></li>
+            <li class="nav-item"><a class={`nav-link ${pathname === '/youer/' ? 'active' : ''}`} href={`/youer/`}>Home</a></li>
+            <li class="nav-item"><a class={`nav-link ${pathname === '/youer/mods/' ? 'active' : ''}`} href={`/youer/mods/`}>模組列表</a></li>
+            <li class="nav-item"><a class={`nav-link ${pathname === '/youer/commands/' ? 'active' : ''}`} href={`/youer/commands/`}>常用指令</a></li>
+            <li class="nav-item"><a class={`nav-link ${pathname === '/youer/joinserver/' ? 'active' : ''}`} href={`/youer/joinserver/`}>如何進入</a></li>
         </ul>
 
         <!-- 右側下拉選單 -->
