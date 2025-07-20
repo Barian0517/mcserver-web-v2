@@ -20,6 +20,12 @@ import 'bootstrap/dist/css/bootstrap.css'
     <title>幽影櫻的MC伺服器</title>
 
     <style is:global>
+
+        /* navbar-top-fixed.css */
+        body {
+            min-height: 75rem;
+            padding-top: 46px !important;
+        }
         .block {
             margin: auto; /*置中*/
             /* opacity: 0.6;  刪掉這行 */
@@ -55,16 +61,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 </head>
 <body>
     <Navbar title={navTitle} />
-
-    <div>   <!-- 佔位空白符號 -->
-
-        <div>
-            &nbsp;
-        </div>
-        <div>
-            &nbsp;
-        </div>
-    </div>
 
     <!-- 主要內容區 -->
     <slot />
