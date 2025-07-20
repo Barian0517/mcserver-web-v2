@@ -2,13 +2,15 @@
 const { navTitle } = Astro.props;
 
 
-import Navbar from '../components/Navbar-youer.astro';
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ToTop from '../components/ToTop.astro';
 
 // Import all of Bootstrap’s CSS
 import 'bootstrap/dist/css/bootstrap.css'
 // Import all of Bootstrap’s JS
+const currentPath = Astro.url.pathname;
+
 ---
 <!doctype html>
 <html lang="zh-tw">
@@ -60,7 +62,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 </head>
 <body>
-    <Navbar title={navTitle} />
+    <Navbar />
 
     <!-- 主要內容區 -->
     <slot />

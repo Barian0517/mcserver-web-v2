@@ -1,0 +1,18 @@
+---
+// src/components/NavbarSwitcher.astro
+import NavbarPaper from './Navbar-paper.astro';
+import NavbarYouer from './Navbar-youer.astro';
+
+const { pathname } = Astro.url;
+
+let SelectedNavbar;
+
+if (pathname.startsWith('/youer/')) {
+  SelectedNavbar = NavbarYouer;
+} else if (pathname.startsWith('/paper/')) {
+  SelectedNavbar = NavbarPaper;
+} else {
+  SelectedNavbar = null; // 或一個預設 Navbar
+}
+---
+{SelectedNavbar ? <SelectedNavbar /> : null}
