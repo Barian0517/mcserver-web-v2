@@ -7,9 +7,9 @@ const { pathname } = Astro.url;
 
 let SelectedNavbar;
 
-if (pathname.startsWith('/youer/')) {
+if (pathname.startsWith('/youer')) {
   SelectedNavbar = NavbarYouer;
-} else if (pathname.startsWith('/paper/')) {
+} else if (pathname.startsWith('/paper')) {
   SelectedNavbar = NavbarPaper;
 } else {
   SelectedNavbar = null; // 或一個預設 Navbar
